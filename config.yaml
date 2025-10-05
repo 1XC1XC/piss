@@ -1,0 +1,3 @@
+git:
+  remote: git@github.com:USERNAME/REPO.git
+  branch: main
