@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"math"
+	// "math"
 	"time"
 
 	"math/rand/v2"
@@ -17,16 +17,12 @@ func init() {
 
 }
 
-func o(k, j any) time.Duration {
-	x := math.Pow(k.(float64), j.(float64))
-	return time.Duration(x)
-}
-
 func main() {
+	Delay := time.Duration(10 * time.Millisecond)
+
 	var i int64
 	for i = 1; i <= 100; i++ {
-		Delay := time.Millisecond * o(i, float64(i))
-		fmt.Println(i, Delay)
+		fmt.Println(RNG.Int64N(i))
 		time.Sleep(Delay)
 	}
 }
