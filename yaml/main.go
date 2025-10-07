@@ -16,7 +16,8 @@ type User struct {
 
 type Core struct {
 	User User //`yaml:"User"`
-} 
+}
+
 // Pro-Tip: String Literals aren't required
 // Lowercase the keys in the YAML file
 

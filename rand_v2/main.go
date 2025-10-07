@@ -10,7 +10,7 @@ import (
 
 var RNG *rand.Rand
 
-func init() {
+func init() { // v2 cool' an' shi' 
 	var Unix uint64 = uint64(time.Now().UnixMicro())
 	RandUnix := func() uint64 { return Unix - rand.Uint64N(Unix) }
 	RNG = rand.New(rand.NewPCG(RandUnix(), RandUnix()))
@@ -22,7 +22,7 @@ func main() {
 
 	var i int64
 	for i = 1; i <= 100; i++ {
-		fmt.Println(RNG.Int64N(i))
+		fmt.Println(RNG.Int64N(i))// 999
 		time.Sleep(Delay)
 	}
 }

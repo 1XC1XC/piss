@@ -1,8 +1,8 @@
-package structs 
+package main
 
 import (
 	"fmt"
-	"piss/Map"
+	"structs/Map"
 )
 
 func main() {
